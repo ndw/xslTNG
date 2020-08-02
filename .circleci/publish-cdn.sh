@@ -1,14 +1,16 @@
 #!/bin/bash
 
-if [[ -v CIRCLE_TAG ]]; then
-    echo "Deploying CDN updates for $CIRCLE_TAG"
-else
-    if [ "$CIRCLE_PROJECT_USERNAME" != "docbook" \
-         -o "$CIRCLE_BRANCH" != "main" ]; then
-        echo "Snapshots are only for docbook/main commits"
-        exit
-    fi
-fi
+set -x
+
+#if [[ -v CIRCLE_TAG ]]; then
+#    echo "Deploying CDN updates for $CIRCLE_TAG"
+#else
+#    if [ "$CIRCLE_PROJECT_USERNAME" != "docbook" \
+#         -o "$CIRCLE_BRANCH" != "main" ]; then
+#        echo "Snapshots are only for docbook/main commits"
+#        exit
+#    fi
+#fi
 
 if [ `git branch -r | grep "origin/gh-pages" | wc -l` = 0 ]; then
     echo "No gh-pages branch for publication"
@@ -35,6 +37,8 @@ mkdir cdn
 cd cdn
 git clone --depth 1 -c core.sshCommand="/usr/bin/ssh -i $IDRSA" git@github.com:docbook/cdn.git .
 
+ls release/xsltng
+
 if [[ -v CIRCLE_TAG ]]; then
     mkdir -p release/xsltng/snapshot
     cp ../repo/build/distributions/*.zip release/xsltng/snapshot/
@@ -51,9 +55,13 @@ else
     rsync -ar release/xsltng/$CIRCLE_TAG/ release/xsltng/current/
 fi
 
+ls release/xsltng
+
 # generate indexes
 perl bin/make-indexes.pl release/xsltng
 
+ls release/xsltng
+
 git add .
-git commit -m "Deploy xsltng CDN for ${CIRCLE_PROJECT_USERNAME}: ${SHA}"
-git push -q origin HEAD
+#git commit -m "Deploy xsltng CDN for ${CIRCLE_PROJECT_USERNAME}: ${SHA}"
+#git push -q origin HEAD
