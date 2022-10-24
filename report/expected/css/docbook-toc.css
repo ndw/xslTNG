@@ -1,4 +1,4 @@
-/* DocBook xslTNG version 0.9.8
+/* DocBook xslTNG version 1.9.0
  *
  * This is docbook-toc.css.
  *
@@ -18,16 +18,15 @@ nav.tocopen {
 }
 
 nav.toc {
-    border-left: 1px solid var(--border-grey);
-    color: black;
+    border-left: 1px solid var(--border-color);
+    background-color: var(--focused-color);
+    color: var(--on-surface-color);
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 2;
     top: 0;
     right: 0;
-    overflow-x: scroll;
-    background-color: var(--nav-background-color);
     padding: 0;
     margin: 0;
     font-size: 12pt;
@@ -35,13 +34,19 @@ nav.toc {
     padding-left: 0;
 }
 
+@media only screen {
+    nav.toc {
+        overflow-x: scroll;
+    }
+}
+
 nav.toc.slide {
     transition: 0.33s;
 }
 
 nav.toc header {
-    height: 40px;
-    font-family: "Noto Sans", sans-serif;
+    height: 4rem;
+    font-family: var(--title-family);
     font-size: 1.25em;
 }
 
@@ -53,8 +58,13 @@ nav.toc header .close {
 }
 
 nav.toc div {
-    overflow: scroll;
-    height: calc(100% - 40px);
+    height: calc(100% - 4rem);
+}
+
+@media only screen {
+    nav.toc div {
+        overflow: scroll;
+    }
 }
 
 nav.toc a,
@@ -70,4 +80,14 @@ nav.toc .refpurpose {
 nav.toc li {
     text-indent: -1em;
     padding-left: 1em;
+}
+
+nav.toc li a.found::before {
+    color: #ff7f7f;
+    content: "►";
+}
+
+.ptoc-search {
+    margin: 0;
+    padding: 0;
 }

@@ -1,5 +1,4 @@
-<!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML><html xmlns="http://www.w3.org/1999/xhtml">
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
@@ -24,10 +23,12 @@ high quality print output with a paged media capable CSS processor is
 also supported.</p>
 
 <div>
-<h3>Documentation</h3>
+<h3 id="documentation">Documentation</h3>
 
 <p>The stylesheets are documented in the
 <a href="guide/index.html"><cite>DocBook: xslTNG Reference</cite></a>.
+Version 1.8.0 is also available
+as <a href="pdf/DocBook-xslTNG-1.8.0.pdf">a PDF</a>.
 </p>
 
 <p>The <a href="https://xslt.xmlexplorer.com/">XSLT Explorer</a>
@@ -36,7 +37,7 @@ summary of the stylesheets <a href="explorer/index.html">is also available</a>.
 
 <div>
 <h4>Sample output</h4>
-<p>The stylesheets come with a test suite of 1,556
+<p>The stylesheets come with a test suite of 1,572
 tests.
 The <a href="report/index.html">test suite report</a> shows the current status of all
 of the tests. It also includes samples of the expected output for a large collection
@@ -70,7 +71,7 @@ of test documents.</p>
 <div id="chap2" class="figure pgwide">
   <div class="screenshot">
     <h5>Figure 2. Persistent Table of Contents</h5>
-    <p><a href="samples/fit/chap02.html">Chapter 2</a> shows how it is
+    <p><a href="samples/fit/ch02.html">Chapter 2</a> shows how it is
     now possible to include a Table of Contents for the entire
     document as a fly-out navigation bar in “chunked” output.</p>
     <div class="mediaobject" summary="Screenshot of a rendered DocBook chapter.">
@@ -142,40 +143,45 @@ of test documents.</p>
 </div>
 </div>
 
+<p>An example of the (at the time of writing) experimental “theme selection”
+feature <a href="samples/themes/">is also available</a>.</p>
+
 </div>
 
 <div>
-<h3>Getting the stylesheets</h3>
+<h3 id="getting">Getting the stylesheets</h3>
 
-<p>The stylesheets are available from <a href="https://github.com/docbook/xslTNG/">GitHub</a>.
-They will also be available from the
-<!-- <a href="https://cdn.docbook.org/release/xslTNG/">DocBook CDN</a> -->
-DocBook CDN in due course and from Maven.</p>
+<p>The stylesheets are available from <a href="https://github.com/docbook/xslTNG/">GitHub</a>
+and from the
+<a href="https://cdn.docbook.org/release/xsltng/">DocBook CDN</a>.
+They are also available
+<a href="https://search.maven.org/artifact/org.docbook/docbook-xslTNG">through Maven</a>.</p>
 
 <div>
 <h4>The latest release</h4>
 
-<p>The <a href="https://github.com/docbook/xslTNG/releases/latest">latest release</a> is version 0.9.8
-published&nbsp;at&nbsp;08:02&nbsp;<a xmlns="" xmlns:f="http://nwalsh.com/ns/xsl/functions" href="https://www.timeanddate.com/time/zones/gmt">GMT</a>&nbsp;on&nbsp;14&nbsp;Jul&nbsp;2020.</p>
+<p>The <a href="https://github.com/docbook/xslTNG/releases/latest">latest release</a>
+is version 1.9.0 published&nbsp;at&nbsp;16:05&nbsp;<a href="https://www.timeanddate.com/time/zones/gmt">GMT</a> on&nbsp;02&nbsp;Oct&nbsp;2022.</p>
 </div>
 <div>
-<h4>The cutting edge</h4>
+<h4>The cutting edge<img class="badge" alt="CirclCI build status badge" src="https://circleci.com/gh/docbook/xslTNG.svg?style=shield">
+</h4>
 
-<p>The <a href="https://github.com/docbook/xslTNG/">current development branch</a> contains the latest commits
-since the last release.</p>
+<p>The <a href="https://github.com/docbook/xslTNG/">current
+development branch</a> contains the latest commits since the last
+release.</p>
 
-<p>Current build status:
-<img src="https://circleci.com/gh/ndw/docbook-xsltNG.svg?style=svg&amp;circle-token=fff3d12b38fab0fbce5b9f431f80d1b44f1b5553">; all tests are passing.
+<p>Current <a href="https://circleci.com/gh/docbook/xslTNG">status</a>: all tests are passing.
 </p>
 
 <p>Instructions for building the stylesheets from the sources are
-included <a href="guide/ch01.html">in the guide</a>.</p>
+included <a href="guide/ch05.html">in the guide</a>.</p>
 
 </div>
 </div>
 </div>
 <div>
-<h3>Participate!</h3>
+<h3 id="participate">Participate!</h3>
 
 <p>Please contribute ideas, suggestions, and pull requests for
 improving the stylesheets!</p>
@@ -189,6 +195,8 @@ or could be improved, please <a href="https://github.com/docbook/xslTNG/issues">
 issue or make a pull request!</li>
 <li>If you have a suggestion for alternate screen or print CSS styling,
 please send it along!</li>
+<li>If you struggled with something that you think needs a better explanation
+in the reference guide, let us know!</li>
 <li>And, obviously, if you think you’ve found a bug, <a href="https://github.com/docbook/xslTNG/issues">please
 report it</a>!</li>
 </ul>

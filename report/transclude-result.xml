@@ -1,0 +1,1368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+         xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/transclude.xspec"
+         stylesheet="file:/home/runner/work/xslTNG/xslTNG/build/xslt/xspec-driver.xsl"
+         date="2022-10-24T08:35:34.711143Z">
+   <scenario id="scenario1"
+              xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/transclude.xspec">
+      <label>When transcluding with no fixup</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                     href="file:/home/runner/work/xslTNG/xslTNG/src/test/resources/xml/transclusion.001.xml"/>
+      </input-wrap>
+      <result select="/self::document-node()">
+         <content-wrap xmlns="">
+            <html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+               <head>
+                  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+                  <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+                  <title>Transclusion 001</title>
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                  <link href="https://purl.org/dc/elements/1.1/" rel="schema.dc"/>
+                  <meta content="2011-04-22T17:02:00-06:00" name="dc.modified"/>
+                  <meta content="DocBook xslTNG" name="generator"/>
+                  <link href="./css/docbook.css" rel="stylesheet"/>
+                  <link href="./css/docbook-screen.css" rel="stylesheet" media="screen"/>
+                  <link href="./css/docbook-page-setup.css" rel="stylesheet" media="print"/>
+                  <link href="./css/docbook-paged.css" rel="stylesheet" media="print"/>
+               </head>
+               <body class="home">
+                  <nav class="top"/>
+                  <main>
+                     <article class="article component">
+                        <header>
+                           <h1>Transclusion 001</h1>
+                        </header>
+                        <div class="list-of-titles">
+                           <div class="lot toc">
+                              <div class="title">Table of Contents</div>
+                              <ul class="toc">
+                                 <li>
+                                    <a href="#R_s1">
+                                       <span class="number">1<span class="sep"> </span>
+                                       </span>Subsection One</a>
+                                 </li>
+                                 <li>
+                                    <a href="#R_s2">
+                                       <span class="number">2<span class="sep"> </span>
+                                       </span>Subsection Two</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <p>In this document, no transclusion fixup is performed. Duplicate IDs exist,
+links to those IDs are resolved by the user agent.</p>
+                        <p>In a document where the same fragment is included (for example,
+with XInclude) more than once, any ID values in that fragment will
+be duplicated in the resulting document. Duplicate IDs should be avoided.
+</p>
+                        <p>The DocBook <i class="citetitle">
+                              <a href="https://docbook.org/docs/transclusion/">
+                                 <a href="https://docbook.org/docs/transclusion/">Transclusion</a>
+                              </a>
+                           </i>
+specification is intended to address this problem by providing “fixup”
+mechanisms.</p>
+                        <p>In this document, we use the following <code class="tag tag-element">
+                              <a href="#caution">caution</a>
+                           </code>
+element as an example:</p>
+                        <div id="caution" class="admonition caution">
+                           <div>
+                              <div class="icon">⚠︎</div>
+                              <div class="body">
+                                 <header>
+                                    <div class="title">Transclusion Example Caution</div>
+                                 </header>
+                                 <div>
+                                    <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                    <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                    <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <p>Here it is <a href="#caution" class="link">repeated</a>:</p>
+                        <div id="caution" class="admonition caution">
+                           <div>
+                              <div class="icon">⚠︎</div>
+                              <div class="body">
+                                 <header>
+                                    <div class="title">Transclusion Example Caution</div>
+                                 </header>
+                                 <div>
+                                    <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                    <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                    <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <section id="R_s1" class="section">
+                           <header>
+                              <h2>
+                                 <span class="number">1<span class="sep"> </span>
+                                 </span>Subsection One</h2>
+                           </header>
+                           <p>Here it is <a href="#caution" class="link">repeated</a> in a subsection:</p>
+                           <div id="caution" class="admonition caution">
+                              <div>
+                                 <div class="icon">⚠︎</div>
+                                 <div class="body">
+                                    <header>
+                                       <div class="title">Transclusion Example Caution</div>
+                                    </header>
+                                    <div>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                       <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                        <section id="R_s2" class="section">
+                           <header>
+                              <h2>
+                                 <span class="number">2<span class="sep"> </span>
+                                 </span>Subsection Two</h2>
+                           </header>
+                           <p>Here it is <a href="#caution" class="link">repeated</a> in another subsection:</p>
+                           <div id="caution" class="admonition caution">
+                              <div>
+                                 <div class="icon">⚠︎</div>
+                                 <div class="body">
+                                    <header>
+                                       <div class="title">Transclusion Example Caution</div>
+                                    </header>
+                                    <div>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                       <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                     </article>
+                  </main>
+                  <nav class="bottom"/>
+               </body>
+            </html>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>expect it to produce the right results</label>
+         <expect select="/self::document-node()">
+            <content-wrap xmlns="">
+               <html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+                  <head>
+                     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+                     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+                     <title>Transclusion 001</title>
+                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                     <link href="https://purl.org/dc/elements/1.1/" rel="schema.dc"/>
+                     <meta content="2011-04-22T17:02:00-06:00" name="dc.modified"/>
+                     <meta content="DocBook xslTNG" name="generator"/>
+                     <link href="./css/docbook.css" rel="stylesheet"/>
+                     <link href="./css/docbook-screen.css" rel="stylesheet" media="screen"/>
+                     <link href="./css/docbook-page-setup.css" rel="stylesheet" media="print"/>
+                     <link href="./css/docbook-paged.css" rel="stylesheet" media="print"/>
+                  </head>
+                  <body class="home">
+                     <nav class="top"/>
+                     <main>
+                        <article class="article component">
+                           <header>
+                              <h1>Transclusion 001</h1>
+                           </header>
+                           <div class="list-of-titles">
+                              <div class="lot toc">
+                                 <div class="title">Table of Contents</div>
+                                 <ul class="toc">
+                                    <li>
+                                       <a href="#R_s1">
+                                          <span class="number">1<span class="sep"> </span>
+                                          </span>Subsection One</a>
+                                    </li>
+                                    <li>
+                                       <a href="#R_s2">
+                                          <span class="number">2<span class="sep"> </span>
+                                          </span>Subsection Two</a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <p>In this document, no transclusion fixup is performed. Duplicate IDs exist,
+links to those IDs are resolved by the user agent.</p>
+                           <p>In a document where the same fragment is included (for example,
+with XInclude) more than once, any ID values in that fragment will
+be duplicated in the resulting document. Duplicate IDs should be avoided.
+</p>
+                           <p>The DocBook <i class="citetitle">
+                                 <a href="https://docbook.org/docs/transclusion/">
+                                    <a href="https://docbook.org/docs/transclusion/">Transclusion</a>
+                                 </a>
+                              </i>
+specification is intended to address this problem by providing “fixup”
+mechanisms.</p>
+                           <p>In this document, we use the following <code class="tag tag-element">
+                                 <a href="#caution">caution</a>
+                              </code>
+element as an example:</p>
+                           <div id="caution" class="admonition caution">
+                              <div>
+                                 <div class="icon">⚠︎</div>
+                                 <div class="body">
+                                    <header>
+                                       <div class="title">Transclusion Example Caution</div>
+                                    </header>
+                                    <div>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                       <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <p>Here it is <a href="#caution" class="link">repeated</a>:</p>
+                           <div id="caution" class="admonition caution">
+                              <div>
+                                 <div class="icon">⚠︎</div>
+                                 <div class="body">
+                                    <header>
+                                       <div class="title">Transclusion Example Caution</div>
+                                    </header>
+                                    <div>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                       <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <section id="R_s1" class="section">
+                              <header>
+                                 <h2>
+                                    <span class="number">1<span class="sep"> </span>
+                                    </span>Subsection One</h2>
+                              </header>
+                              <p>Here it is <a href="#caution" class="link">repeated</a> in a subsection:</p>
+                              <div id="caution" class="admonition caution">
+                                 <div>
+                                    <div class="icon">⚠︎</div>
+                                    <div class="body">
+                                       <header>
+                                          <div class="title">Transclusion Example Caution</div>
+                                       </header>
+                                       <div>
+                                          <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                          <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                          <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                           <section id="R_s2" class="section">
+                              <header>
+                                 <h2>
+                                    <span class="number">2<span class="sep"> </span>
+                                    </span>Subsection Two</h2>
+                              </header>
+                              <p>Here it is <a href="#caution" class="link">repeated</a> in another subsection:</p>
+                              <div id="caution" class="admonition caution">
+                                 <div>
+                                    <div class="icon">⚠︎</div>
+                                    <div class="body">
+                                       <header>
+                                          <div class="title">Transclusion Example Caution</div>
+                                       </header>
+                                       <div>
+                                          <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                          <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                          <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </article>
+                     </main>
+                     <nav class="bottom"/>
+                  </body>
+               </html>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+              xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/transclude.xspec">
+      <label>When transcluding with auto fixup</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                     href="file:/home/runner/work/xslTNG/xslTNG/src/test/resources/xml/transclusion.002.xml"/>
+      </input-wrap>
+      <result select="/self::document-node()">
+         <content-wrap xmlns="">
+            <html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+               <head>
+                  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+                  <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+                  <title>Transclusion 001</title>
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                  <link href="https://purl.org/dc/elements/1.1/" rel="schema.dc"/>
+                  <meta content="2011-04-22T17:02:00-06:00" name="dc.modified"/>
+                  <meta content="DocBook xslTNG" name="generator"/>
+                  <link href="./css/docbook.css" rel="stylesheet"/>
+                  <link href="./css/docbook-screen.css" rel="stylesheet" media="screen"/>
+                  <link href="./css/docbook-page-setup.css" rel="stylesheet" media="print"/>
+                  <link href="./css/docbook-paged.css" rel="stylesheet" media="print"/>
+               </head>
+               <body class="home">
+                  <nav class="top"/>
+                  <main>
+                     <article class="article component">
+                        <header>
+                           <h1>Transclusion 001</h1>
+                        </header>
+                        <div class="list-of-titles">
+                           <div class="lot toc">
+                              <div class="title">Table of Contents</div>
+                              <ul class="toc">
+                                 <li>
+                                    <a href="#R_s1">
+                                       <span class="number">1<span class="sep"> </span>
+                                       </span>Subsection One</a>
+                                 </li>
+                                 <li>
+                                    <a href="#R_s2">
+                                       <span class="number">2<span class="sep"> </span>
+                                       </span>Subsection Two</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <p>In this document, all transcluded IDs are resolved with the ‘auto’ fixup.</p>
+                        <p>In a document where the same fragment is included (for example,
+with XInclude) more than once, any ID values in that fragment will
+be duplicated in the resulting document. Duplicate IDs should be avoided.
+</p>
+                        <p>The DocBook <i class="citetitle">
+                              <a href="https://docbook.org/docs/transclusion/">
+                                 <a href="https://docbook.org/docs/transclusion/">Transclusion</a>
+                              </a>
+                           </i>
+specification is intended to address this problem by providing “fixup”
+mechanisms.</p>
+                        <p>In this document, we use the following <code class="tag tag-element">
+                              <a href="#caution---R_caution1">caution</a>
+                           </code>
+element as an example:</p>
+                        <div id="caution---R_caution1" class="admonition caution">
+                           <div>
+                              <div class="icon">⚠︎</div>
+                              <div class="body">
+                                 <header>
+                                    <div class="title">Transclusion Example Caution</div>
+                                 </header>
+                                 <div>
+                                    <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                    <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                    <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <p>Here it is <a href="#caution---R_caution1" class="link">repeated</a>:</p>
+                        <div id="caution---R_caution2" class="admonition caution">
+                           <div>
+                              <div class="icon">⚠︎</div>
+                              <div class="body">
+                                 <header>
+                                    <div class="title">Transclusion Example Caution</div>
+                                 </header>
+                                 <div>
+                                    <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                    <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                    <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <section id="R_s1" class="section">
+                           <header>
+                              <h2>
+                                 <span class="number">1<span class="sep"> </span>
+                                 </span>Subsection One</h2>
+                           </header>
+                           <p>Here it is <a href="#caution---R_caution1" class="link">repeated</a> in a subsection:</p>
+                           <div id="caution---R_s1_caution1" class="admonition caution">
+                              <div>
+                                 <div class="icon">⚠︎</div>
+                                 <div class="body">
+                                    <header>
+                                       <div class="title">Transclusion Example Caution</div>
+                                    </header>
+                                    <div>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                       <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                        <section id="R_s2" class="section">
+                           <header>
+                              <h2>
+                                 <span class="number">2<span class="sep"> </span>
+                                 </span>Subsection Two</h2>
+                           </header>
+                           <p>Here it is <a href="#caution---R_caution1" class="link">repeated</a> in another subsection:</p>
+                           <div id="caution---R_s2_caution1" class="admonition caution">
+                              <div>
+                                 <div class="icon">⚠︎</div>
+                                 <div class="body">
+                                    <header>
+                                       <div class="title">Transclusion Example Caution</div>
+                                    </header>
+                                    <div>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                       <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                     </article>
+                  </main>
+                  <nav class="bottom"/>
+               </body>
+            </html>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>expect it to produce the right results</label>
+         <expect select="/self::document-node()">
+            <content-wrap xmlns="">
+               <html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+                  <head>
+                     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+                     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+                     <title>Transclusion 001</title>
+                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                     <link href="https://purl.org/dc/elements/1.1/" rel="schema.dc"/>
+                     <meta content="2011-04-22T17:02:00-06:00" name="dc.modified"/>
+                     <meta content="DocBook xslTNG" name="generator"/>
+                     <link href="./css/docbook.css" rel="stylesheet"/>
+                     <link href="./css/docbook-screen.css" rel="stylesheet" media="screen"/>
+                     <link href="./css/docbook-page-setup.css" rel="stylesheet" media="print"/>
+                     <link href="./css/docbook-paged.css" rel="stylesheet" media="print"/>
+                  </head>
+                  <body class="home">
+                     <nav class="top"/>
+                     <main>
+                        <article class="article component">
+                           <header>
+                              <h1>Transclusion 001</h1>
+                           </header>
+                           <div class="list-of-titles">
+                              <div class="lot toc">
+                                 <div class="title">Table of Contents</div>
+                                 <ul class="toc">
+                                    <li>
+                                       <a href="#R_s1">
+                                          <span class="number">1<span class="sep"> </span>
+                                          </span>Subsection One</a>
+                                    </li>
+                                    <li>
+                                       <a href="#R_s2">
+                                          <span class="number">2<span class="sep"> </span>
+                                          </span>Subsection Two</a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <p>In this document, all transcluded IDs are resolved with the ‘auto’ fixup.</p>
+                           <p>In a document where the same fragment is included (for example,
+with XInclude) more than once, any ID values in that fragment will
+be duplicated in the resulting document. Duplicate IDs should be avoided.
+</p>
+                           <p>The DocBook <i class="citetitle">
+                                 <a href="https://docbook.org/docs/transclusion/">
+                                    <a href="https://docbook.org/docs/transclusion/">Transclusion</a>
+                                 </a>
+                              </i>
+specification is intended to address this problem by providing “fixup”
+mechanisms.</p>
+                           <p>In this document, we use the following <code class="tag tag-element">
+                                 <a href="#caution---R_caution1">caution</a>
+                              </code>
+element as an example:</p>
+                           <div id="caution---R_caution1" class="admonition caution">
+                              <div>
+                                 <div class="icon">⚠︎</div>
+                                 <div class="body">
+                                    <header>
+                                       <div class="title">Transclusion Example Caution</div>
+                                    </header>
+                                    <div>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                       <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <p>Here it is <a href="#caution---R_caution1" class="link">repeated</a>:</p>
+                           <div id="caution---R_caution2" class="admonition caution">
+                              <div>
+                                 <div class="icon">⚠︎</div>
+                                 <div class="body">
+                                    <header>
+                                       <div class="title">Transclusion Example Caution</div>
+                                    </header>
+                                    <div>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                       <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <section id="R_s1" class="section">
+                              <header>
+                                 <h2>
+                                    <span class="number">1<span class="sep"> </span>
+                                    </span>Subsection One</h2>
+                              </header>
+                              <p>Here it is <a href="#caution---R_caution1" class="link">repeated</a> in a subsection:</p>
+                              <div id="caution---R_s1_caution1" class="admonition caution">
+                                 <div>
+                                    <div class="icon">⚠︎</div>
+                                    <div class="body">
+                                       <header>
+                                          <div class="title">Transclusion Example Caution</div>
+                                       </header>
+                                       <div>
+                                          <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                          <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                          <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                           <section id="R_s2" class="section">
+                              <header>
+                                 <h2>
+                                    <span class="number">2<span class="sep"> </span>
+                                    </span>Subsection Two</h2>
+                              </header>
+                              <p>Here it is <a href="#caution---R_caution1" class="link">repeated</a> in another subsection:</p>
+                              <div id="caution---R_s2_caution1" class="admonition caution">
+                                 <div>
+                                    <div class="icon">⚠︎</div>
+                                    <div class="body">
+                                       <header>
+                                          <div class="title">Transclusion Example Caution</div>
+                                       </header>
+                                       <div>
+                                          <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                          <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                          <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </article>
+                     </main>
+                     <nav class="bottom"/>
+                  </body>
+               </html>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+              xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/transclude.xspec">
+      <label>When transcluding with suffix fixup</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                     href="file:/home/runner/work/xslTNG/xslTNG/src/test/resources/xml/transclusion.003.xml"/>
+      </input-wrap>
+      <result select="/self::document-node()">
+         <content-wrap xmlns="">
+            <html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+               <head>
+                  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+                  <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+                  <title>Transclusion 001</title>
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                  <link href="https://purl.org/dc/elements/1.1/" rel="schema.dc"/>
+                  <meta content="2011-04-22T17:02:00-06:00" name="dc.modified"/>
+                  <meta content="DocBook xslTNG" name="generator"/>
+                  <link href="./css/docbook.css" rel="stylesheet"/>
+                  <link href="./css/docbook-screen.css" rel="stylesheet" media="screen"/>
+                  <link href="./css/docbook-page-setup.css" rel="stylesheet" media="print"/>
+                  <link href="./css/docbook-paged.css" rel="stylesheet" media="print"/>
+               </head>
+               <body class="home">
+                  <nav class="top"/>
+                  <main>
+                     <article class="article component">
+                        <header>
+                           <h1>Transclusion 001</h1>
+                        </header>
+                        <div class="list-of-titles">
+                           <div class="lot toc">
+                              <div class="title">Table of Contents</div>
+                              <ul class="toc">
+                                 <li>
+                                    <a href="#R_s1">
+                                       <span class="number">1<span class="sep"> </span>
+                                       </span>Subsection One</a>
+                                 </li>
+                                 <li>
+                                    <a href="#R_s2">
+                                       <span class="number">2<span class="sep"> </span>
+                                       </span>Subsection Two</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <p>In this document, all transcluded IDs are resolved with the ‘suffix’ fixup
+and the default linkscope which is ‘global’.</p>
+                        <p>In a document where the same fragment is included (for example,
+with XInclude) more than once, any ID values in that fragment will
+be duplicated in the resulting document. Duplicate IDs should be avoided.
+</p>
+                        <p>The DocBook <i class="citetitle">
+                              <a href="https://docbook.org/docs/transclusion/">
+                                 <a href="https://docbook.org/docs/transclusion/">Transclusion</a>
+                              </a>
+                           </i>
+specification is intended to address this problem by providing “fixup”
+mechanisms.</p>
+                        <p>In this document, we use the following <code class="tag tag-element">
+                              <a href="#cautionone">caution</a>
+                           </code>
+element as an example:</p>
+                        <div id="cautionone" class="admonition caution">
+                           <div>
+                              <div class="icon">⚠︎</div>
+                              <div class="body">
+                                 <header>
+                                    <div class="title">Transclusion Example Caution</div>
+                                 </header>
+                                 <div>
+                                    <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                    <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                    <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <p>Here it is <a href="#cautionone" class="link">repeated</a>:</p>
+                        <div id="cautiontwo" class="admonition caution">
+                           <div>
+                              <div class="icon">⚠︎</div>
+                              <div class="body">
+                                 <header>
+                                    <div class="title">Transclusion Example Caution</div>
+                                 </header>
+                                 <div>
+                                    <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                    <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                    <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <section id="R_s1" class="section">
+                           <header>
+                              <h2>
+                                 <span class="number">1<span class="sep"> </span>
+                                 </span>Subsection One</h2>
+                           </header>
+                           <p>Here it is <a href="#cautionone" class="link">repeated</a> in a subsection:</p>
+                           <div id="cautionthree" class="admonition caution">
+                              <div>
+                                 <div class="icon">⚠︎</div>
+                                 <div class="body">
+                                    <header>
+                                       <div class="title">Transclusion Example Caution</div>
+                                    </header>
+                                    <div>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                       <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                        <section id="R_s2" class="section">
+                           <header>
+                              <h2>
+                                 <span class="number">2<span class="sep"> </span>
+                                 </span>Subsection Two</h2>
+                           </header>
+                           <p>Here it is <a href="#cautionone" class="link">repeated</a> in another subsection:</p>
+                           <div id="cautionfour" class="admonition caution">
+                              <div>
+                                 <div class="icon">⚠︎</div>
+                                 <div class="body">
+                                    <header>
+                                       <div class="title">Transclusion Example Caution</div>
+                                    </header>
+                                    <div>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                       <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                     </article>
+                  </main>
+                  <nav class="bottom"/>
+               </body>
+            </html>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>expect it to produce the right results</label>
+         <expect select="/self::document-node()">
+            <content-wrap xmlns="">
+               <html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+                  <head>
+                     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+                     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+                     <title>Transclusion 001</title>
+                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                     <link href="https://purl.org/dc/elements/1.1/" rel="schema.dc"/>
+                     <meta content="2011-04-22T17:02:00-06:00" name="dc.modified"/>
+                     <meta content="DocBook xslTNG" name="generator"/>
+                     <link href="./css/docbook.css" rel="stylesheet"/>
+                     <link href="./css/docbook-screen.css" rel="stylesheet" media="screen"/>
+                     <link href="./css/docbook-page-setup.css" rel="stylesheet" media="print"/>
+                     <link href="./css/docbook-paged.css" rel="stylesheet" media="print"/>
+                  </head>
+                  <body class="home">
+                     <nav class="top"/>
+                     <main>
+                        <article class="article component">
+                           <header>
+                              <h1>Transclusion 001</h1>
+                           </header>
+                           <div class="list-of-titles">
+                              <div class="lot toc">
+                                 <div class="title">Table of Contents</div>
+                                 <ul class="toc">
+                                    <li>
+                                       <a href="#R_s1">
+                                          <span class="number">1<span class="sep"> </span>
+                                          </span>Subsection One</a>
+                                    </li>
+                                    <li>
+                                       <a href="#R_s2">
+                                          <span class="number">2<span class="sep"> </span>
+                                          </span>Subsection Two</a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <p>In this document, all transcluded IDs are resolved with the ‘suffix’ fixup
+and the default linkscope which is ‘global’.</p>
+                           <p>In a document where the same fragment is included (for example,
+with XInclude) more than once, any ID values in that fragment will
+be duplicated in the resulting document. Duplicate IDs should be avoided.
+</p>
+                           <p>The DocBook <i class="citetitle">
+                                 <a href="https://docbook.org/docs/transclusion/">
+                                    <a href="https://docbook.org/docs/transclusion/">Transclusion</a>
+                                 </a>
+                              </i>
+specification is intended to address this problem by providing “fixup”
+mechanisms.</p>
+                           <p>In this document, we use the following <code class="tag tag-element">
+                                 <a href="#cautionone">caution</a>
+                              </code>
+element as an example:</p>
+                           <div id="cautionone" class="admonition caution">
+                              <div>
+                                 <div class="icon">⚠︎</div>
+                                 <div class="body">
+                                    <header>
+                                       <div class="title">Transclusion Example Caution</div>
+                                    </header>
+                                    <div>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                       <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <p>Here it is <a href="#cautionone" class="link">repeated</a>:</p>
+                           <div id="cautiontwo" class="admonition caution">
+                              <div>
+                                 <div class="icon">⚠︎</div>
+                                 <div class="body">
+                                    <header>
+                                       <div class="title">Transclusion Example Caution</div>
+                                    </header>
+                                    <div>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                       <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <section id="R_s1" class="section">
+                              <header>
+                                 <h2>
+                                    <span class="number">1<span class="sep"> </span>
+                                    </span>Subsection One</h2>
+                              </header>
+                              <p>Here it is <a href="#cautionone" class="link">repeated</a> in a subsection:</p>
+                              <div id="cautionthree" class="admonition caution">
+                                 <div>
+                                    <div class="icon">⚠︎</div>
+                                    <div class="body">
+                                       <header>
+                                          <div class="title">Transclusion Example Caution</div>
+                                       </header>
+                                       <div>
+                                          <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                          <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                          <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                           <section id="R_s2" class="section">
+                              <header>
+                                 <h2>
+                                    <span class="number">2<span class="sep"> </span>
+                                    </span>Subsection Two</h2>
+                              </header>
+                              <p>Here it is <a href="#cautionone" class="link">repeated</a> in another subsection:</p>
+                              <div id="cautionfour" class="admonition caution">
+                                 <div>
+                                    <div class="icon">⚠︎</div>
+                                    <div class="body">
+                                       <header>
+                                          <div class="title">Transclusion Example Caution</div>
+                                       </header>
+                                       <div>
+                                          <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                          <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                          <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </article>
+                     </main>
+                     <nav class="bottom"/>
+                  </body>
+               </html>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+              xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/transclude.xspec">
+      <label>When transcluding with local suffix fixup</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                     href="file:/home/runner/work/xslTNG/xslTNG/src/test/resources/xml/transclusion.004.xml"/>
+      </input-wrap>
+      <result select="/self::document-node()">
+         <content-wrap xmlns="">
+            <html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+               <head>
+                  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+                  <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+                  <title>Transclusion 001</title>
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                  <link href="https://purl.org/dc/elements/1.1/" rel="schema.dc"/>
+                  <meta content="2011-04-22T17:02:00-06:00" name="dc.modified"/>
+                  <meta content="DocBook xslTNG" name="generator"/>
+                  <link href="./css/docbook.css" rel="stylesheet"/>
+                  <link href="./css/docbook-screen.css" rel="stylesheet" media="screen"/>
+                  <link href="./css/docbook-page-setup.css" rel="stylesheet" media="print"/>
+                  <link href="./css/docbook-paged.css" rel="stylesheet" media="print"/>
+               </head>
+               <body class="home">
+                  <nav class="top"/>
+                  <main>
+                     <article class="article component">
+                        <header>
+                           <h1>Transclusion 001</h1>
+                        </header>
+                        <div class="list-of-titles">
+                           <div class="lot toc">
+                              <div class="title">Table of Contents</div>
+                              <ul class="toc">
+                                 <li>
+                                    <a href="#R_s1">
+                                       <span class="number">1<span class="sep"> </span>
+                                       </span>Subsection One</a>
+                                 </li>
+                                 <li>
+                                    <a href="#R_s2">
+                                       <span class="number">2<span class="sep"> </span>
+                                       </span>Subsection Two</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <p>In this document, all transcluded IDs are resolved with the ‘suffix’ fixup
+and ‘local’ linkscope.</p>
+                        <p>In a document where the same fragment is included (for example,
+with XInclude) more than once, any ID values in that fragment will
+be duplicated in the resulting document. Duplicate IDs should be avoided.
+</p>
+                        <p>The DocBook <i class="citetitle">
+                              <a href="https://docbook.org/docs/transclusion/">
+                                 <a href="https://docbook.org/docs/transclusion/">Transclusion</a>
+                              </a>
+                           </i>
+specification is intended to address this problem by providing “fixup”
+mechanisms.</p>
+                        <p>In this document, we use the following <code class="tag tag-element">
+                              <a href="#cautionone">caution</a>
+                           </code>
+element as an example:</p>
+                        <div id="cautionone" class="admonition caution">
+                           <div>
+                              <div class="icon">⚠︎</div>
+                              <div class="body">
+                                 <header>
+                                    <div class="title">Transclusion Example Caution</div>
+                                 </header>
+                                 <div>
+                                    <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                    <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                    <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <p>Here it is <a href="#cautiontwo" class="link">repeated</a>:</p>
+                        <div id="cautiontwo" class="admonition caution">
+                           <div>
+                              <div class="icon">⚠︎</div>
+                              <div class="body">
+                                 <header>
+                                    <div class="title">Transclusion Example Caution</div>
+                                 </header>
+                                 <div>
+                                    <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                    <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                    <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <section id="R_s1" class="section">
+                           <header>
+                              <h2>
+                                 <span class="number">1<span class="sep"> </span>
+                                 </span>Subsection One</h2>
+                           </header>
+                           <p>Here it is <a href="#cautionthree" class="link">repeated</a> in a subsection:</p>
+                           <div id="cautionthree" class="admonition caution">
+                              <div>
+                                 <div class="icon">⚠︎</div>
+                                 <div class="body">
+                                    <header>
+                                       <div class="title">Transclusion Example Caution</div>
+                                    </header>
+                                    <div>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                       <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                        <section id="R_s2" class="section">
+                           <header>
+                              <h2>
+                                 <span class="number">2<span class="sep"> </span>
+                                 </span>Subsection Two</h2>
+                           </header>
+                           <p>Here it is <a href="#cautionfour" class="link">repeated</a> in another subsection:</p>
+                           <div id="cautionfour" class="admonition caution">
+                              <div>
+                                 <div class="icon">⚠︎</div>
+                                 <div class="body">
+                                    <header>
+                                       <div class="title">Transclusion Example Caution</div>
+                                    </header>
+                                    <div>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                       <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                     </article>
+                  </main>
+                  <nav class="bottom"/>
+               </body>
+            </html>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>expect it to produce the right results</label>
+         <expect select="/self::document-node()">
+            <content-wrap xmlns="">
+               <html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+                  <head>
+                     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+                     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+                     <title>Transclusion 001</title>
+                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                     <link href="https://purl.org/dc/elements/1.1/" rel="schema.dc"/>
+                     <meta content="2011-04-22T17:02:00-06:00" name="dc.modified"/>
+                     <meta content="DocBook xslTNG" name="generator"/>
+                     <link href="./css/docbook.css" rel="stylesheet"/>
+                     <link href="./css/docbook-screen.css" rel="stylesheet" media="screen"/>
+                     <link href="./css/docbook-page-setup.css" rel="stylesheet" media="print"/>
+                     <link href="./css/docbook-paged.css" rel="stylesheet" media="print"/>
+                  </head>
+                  <body class="home">
+                     <nav class="top"/>
+                     <main>
+                        <article class="article component">
+                           <header>
+                              <h1>Transclusion 001</h1>
+                           </header>
+                           <div class="list-of-titles">
+                              <div class="lot toc">
+                                 <div class="title">Table of Contents</div>
+                                 <ul class="toc">
+                                    <li>
+                                       <a href="#R_s1">
+                                          <span class="number">1<span class="sep"> </span>
+                                          </span>Subsection One</a>
+                                    </li>
+                                    <li>
+                                       <a href="#R_s2">
+                                          <span class="number">2<span class="sep"> </span>
+                                          </span>Subsection Two</a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <p>In this document, all transcluded IDs are resolved with the ‘suffix’ fixup
+and ‘local’ linkscope.</p>
+                           <p>In a document where the same fragment is included (for example,
+with XInclude) more than once, any ID values in that fragment will
+be duplicated in the resulting document. Duplicate IDs should be avoided.
+</p>
+                           <p>The DocBook <i class="citetitle">
+                                 <a href="https://docbook.org/docs/transclusion/">
+                                    <a href="https://docbook.org/docs/transclusion/">Transclusion</a>
+                                 </a>
+                              </i>
+specification is intended to address this problem by providing “fixup”
+mechanisms.</p>
+                           <p>In this document, we use the following <code class="tag tag-element">
+                                 <a href="#cautionone">caution</a>
+                              </code>
+element as an example:</p>
+                           <div id="cautionone" class="admonition caution">
+                              <div>
+                                 <div class="icon">⚠︎</div>
+                                 <div class="body">
+                                    <header>
+                                       <div class="title">Transclusion Example Caution</div>
+                                    </header>
+                                    <div>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                       <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <p>Here it is <a href="#cautiontwo" class="link">repeated</a>:</p>
+                           <div id="cautiontwo" class="admonition caution">
+                              <div>
+                                 <div class="icon">⚠︎</div>
+                                 <div class="body">
+                                    <header>
+                                       <div class="title">Transclusion Example Caution</div>
+                                    </header>
+                                    <div>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                       <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                       <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <section id="R_s1" class="section">
+                              <header>
+                                 <h2>
+                                    <span class="number">1<span class="sep"> </span>
+                                    </span>Subsection One</h2>
+                              </header>
+                              <p>Here it is <a href="#cautionthree" class="link">repeated</a> in a subsection:</p>
+                              <div id="cautionthree" class="admonition caution">
+                                 <div>
+                                    <div class="icon">⚠︎</div>
+                                    <div class="body">
+                                       <header>
+                                          <div class="title">Transclusion Example Caution</div>
+                                       </header>
+                                       <div>
+                                          <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                          <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                          <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                           <section id="R_s2" class="section">
+                              <header>
+                                 <h2>
+                                    <span class="number">2<span class="sep"> </span>
+                                    </span>Subsection Two</h2>
+                              </header>
+                              <p>Here it is <a href="#cautionfour" class="link">repeated</a> in another subsection:</p>
+                              <div id="cautionfour" class="admonition caution">
+                                 <div>
+                                    <div class="icon">⚠︎</div>
+                                    <div class="body">
+                                       <header>
+                                          <div class="title">Transclusion Example Caution</div>
+                                       </header>
+                                       <div>
+                                          <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+
+</ws>
+                                          <p>This caution has the <code>xml:id</code> value ‘<code>caution</code>’.
+If it is simple transcluded more than once into a document, it will
+introduce duplicate IDs in the document.
+</p>
+                                          <ws xmlns="http://www.jenitennison.com/xslt/xspec">
+</ws>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </article>
+                     </main>
+                     <nav class="bottom"/>
+                  </body>
+               </html>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>
