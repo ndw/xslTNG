@@ -79,7 +79,7 @@ jobs:
         with:
           folder: build/release
           token: ${{ secrets.ACCESS_TOKEN }}
-          repository-name: ${{ github.repository_owner}}/cdn
+          repository-name: ${{ github.repository_owner}}/docbook-cdn
           branch: master
           target-folder: /release/xsltng/${{ env.CI_TAG }}
 
