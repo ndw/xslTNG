@@ -1,4 +1,4 @@
-/* DocBook xslTNG version 1.11.1, https://xsltng.docbook.org */
+/* DocBook xslTNG version 2.0.0, https://xsltng.docbook.org */
 /* No embedded fonts by default. */
 :root {
   --symbol-fonts: "Arial Unicode", "Apple Symbols", "Symbol", "Symbola_hint";
@@ -508,12 +508,34 @@ ul.toc,
   margin-top: 1em;
 }
 
+.iso690 .author {
+  text-transform: uppercase;
+}
+
+.iso690.article .part .firstname,
+.iso690.article .part .givenname {
+  text-transform: none;
+}
+
+.iso690.patent .country, .iso690.patent .patenttype {
+  font-style: italic;
+}
+
+.iso690 .title {
+  font-weight: inherit;
+  font-family: inherit;
+  color: inherit;
+  background-color: inherit;
+  margin-bottom: inherit;
+}
+
 /* ============================================================ */
-.generated-index ul {
+.index-list ul {
   list-style: none;
   padding-left: 2rem;
 }
 
+.index-list > ul,
 .generated-index > ul,
 .generated-indexdiv > ul {
   padding-left: 0;
@@ -1062,14 +1084,14 @@ table.verbatim tr td pre {
   display: table-row;
 }
 
-.qandaentry .question .label,
-.qandaentry .answer .label {
+.qandaentry .question > .label,
+.qandaentry .answer > .label {
   display: table-cell;
   width: 3em;
 }
 
-.qandaentry .question .body,
-.qandaentry .answer .body {
+.qandaentry .question > .body,
+.qandaentry .answer > .body {
   display: table-cell;
 }
 
@@ -1166,6 +1188,10 @@ blockquote p + .attribution {
 }
 
 /* ============================================================ */
+.formalobject + .formalobject {
+  margin-top: 1rem;
+}
+
 .figure,
 .example,
 .equation {
