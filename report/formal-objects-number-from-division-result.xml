@@ -2,7 +2,7 @@
 <report xmlns="http://www.jenitennison.com/xslt/xspec"
          xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/formal-objects-number-from-division.xspec"
          stylesheet="file:/home/runner/work/xslTNG/xslTNG/build/xspec-xslt/xspec-formal-objects-number-from-division-driver.xsl"
-         date="2023-03-26T13:54:16.929457Z">
+         date="2023-03-26T15:47:54.657267Z">
    <scenario id="scenario1"
               xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/formal-objects-number-from-division.xspec">
       <label>When converting formal-objects-numbered-from-division...</label>

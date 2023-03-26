@@ -2,7 +2,7 @@
 <report xmlns="http://www.jenitennison.com/xslt/xspec"
          xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/parts-inherit-from-set-book.xspec"
          stylesheet="file:/home/runner/work/xslTNG/xslTNG/build/xspec-xslt/xspec-parts-inherit-from-set-book-driver.xsl"
-         date="2023-03-26T13:55:13.866491Z">
+         date="2023-03-26T15:48:34.815657Z">
    <scenario id="scenario1"
               xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/parts-inherit-from-set-book.xspec">
       <label>When converting parts-inherit-from-set-book...</label>
