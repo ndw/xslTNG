@@ -2,7 +2,7 @@
 <report xmlns="http://www.jenitennison.com/xslt/xspec"
          xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/formal-objects-number-from-component.xspec"
          stylesheet="file:/home/runner/work/xslTNG/xslTNG/build/xspec-xslt/xspec-formal-objects-number-from-component-driver.xsl"
-         date="2023-03-26T13:05:26.576711Z">
+         date="2023-03-26T13:54:05.58102Z">
    <scenario id="scenario1"
               xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/formal-objects-number-from-component.xspec">
       <label>When converting formal-objects-numbered-from-component...</label>
