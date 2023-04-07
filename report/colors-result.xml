@@ -2,7 +2,7 @@
 <report xmlns="http://www.jenitennison.com/xslt/xspec"
          xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/colors.xspec"
          stylesheet="file:/home/runner/work/xslTNG/xslTNG/build/env/colors.xsl"
-         date="2023-04-07T12:15:47.703411Z">
+         date="2023-04-07T14:31:23.110273Z">
    <scenario id="scenario1"
               xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/colors.xspec">
       <label>When transforming colors.001</label>
