@@ -70,6 +70,8 @@ rem ##
     goto :EOF
 
 :xslt
+    echo "XSLT:"
+    echo %*
     java ^
         -Dxspec.coverage.ignore="%TEST_DIR%" ^
         -Dxspec.coverage.xml="%COVERAGE_XML%" ^
