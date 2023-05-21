@@ -70,8 +70,6 @@ rem ##
     goto :EOF
 
 :xslt
-    echo "RUN:"
-    echo %*
     java ^
         -Dxspec.coverage.ignore="%TEST_DIR%" ^
         -Dxspec.coverage.xml="%COVERAGE_XML%" ^
@@ -79,7 +77,7 @@ rem ##
         -Dxspec.xspecfile="%XSPEC%" ^
         -Dorg.docbook.xsltng.extensions.pygmentize="%PYGMENTIZE%" ^
         -Dorg.docbook.xsltng.verbose="%VERBOSE%" ^
-        -cp "%CP%" net.sf.saxon.Transform ^
+        -cp "%CP%" net.sf.saxon.Transform %CATALOG% ^
         -init:org.docbook.xsltng.extensions.Register %*
     goto :EOF
 
@@ -87,7 +85,7 @@ rem ##
     java ^
         -Dorg.docbook.xsltng.extensions.pygmentize="%PYGMENTIZE%" ^
         -Dorg.docbook.xsltng.verbose="%VERBOSE%" ^
-        -cp "%CP%" net.sf.saxon.Query "%CATALOG%" ^
+        -cp "%CP%" net.sf.saxon.Query %CATALOG% ^
         -init:org.docbook.xsltng.extensions.Register %*
     goto :EOF
 
