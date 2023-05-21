@@ -73,7 +73,7 @@ rem ##
     echo "XSLT:"
     echo %*
     java ^
-        -Dfile.encoding=UTF-8
+        -Dfile.encoding=UTF-8 ^
         -Dxspec.coverage.ignore="%TEST_DIR%" ^
         -Dxspec.coverage.xml="%COVERAGE_XML%" ^
         -Dxspec.home="%XSPEC_HOME%" ^
@@ -86,7 +86,7 @@ rem ##
 
 :xquery
     java ^
-        -Dfile.encoding=UTF-8
+        -Dfile.encoding=UTF-8 ^
         -Dorg.docbook.xsltng.extensions.pygmentize="%PYGMENTIZE%" ^
         -Dorg.docbook.xsltng.verbose="%VERBOSE%" ^
         -cp "%CP%" net.sf.saxon.Query %CATALOG% ^
