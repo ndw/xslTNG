@@ -18,6 +18,7 @@ class ValidationTask {
 
     //println("Register validate_${base}")
     task = project.tasks.register("validate_${base}", RelaxNGValidateTask) {
+      debug true
       input _input
       output _output
       schema xschema
