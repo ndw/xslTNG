@@ -73,7 +73,7 @@ jobs:
       - name: Build on Mac
         if: matrix.os == 'macos-11'
         run: |
-          ./gradlew -PrequireCompileSuccess=true dist
+          ./gradlew --stacktrace -PrequireCompileSuccess=true dist
 
       # Test the build on Windows
 
@@ -90,7 +90,7 @@ jobs:
       - name: Build on Windows
         if: matrix.os == 'windows-2019'
         run: |
-          ./gradlew -PrequireCompileSuccess=true -PrequireTestSuccess=false dist
+          ./gradlew --stacktrace -PrequireCompileSuccess=true -PrequireTestSuccess=false dist
 
       # Test the build on Linux
 
@@ -133,7 +133,7 @@ jobs:
       - name: Build
         if: matrix.os == 'ubuntu-20.04'
         run: |
-          ./gradlew -PrequireCompileSuccess=true dist
+          ./gradlew --stacktrace -PrequireCompileSuccess=true dist
 
       - name: Cleanup SaxonEE
         if: ${{ matrix.os == 'ubuntu-20.04' && env.HAVE_SAXON_EE == 'true' }}
