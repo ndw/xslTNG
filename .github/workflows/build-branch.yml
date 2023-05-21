@@ -90,7 +90,7 @@ jobs:
       - name: Build on Windows
         if: matrix.os == 'windows-2019'
         run: |
-          ./gradlew --stacktrace -PrequireCompileSuccess=true -PrequireTestSuccess=false dist
+          ./gradlew --stacktrace -Dfile.encoding=UTF-8 -PrequireCompileSuccess=true -PrequireTestSuccess=false dist
 
       # Test the build on Linux
 
