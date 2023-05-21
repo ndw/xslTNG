@@ -57,10 +57,6 @@ jobs:
         run: |
           python3 -m pip install pygments==2.14.0 click cython
 
-      - name: Setup SaxonEE
-        if: ${{ env.HAVE_SAXON_EE == 'true' }}
-        run: gpg --batch --yes --passphrase ${{ secrets.SAXON_PASSPHRASE }} -d tools/saxon.enc | tar zxf -
-
       # Test the build on Mac
 
       - name: Install dependencies on Mac
@@ -108,7 +104,7 @@ jobs:
           python3 -m pip install saxonche
           python3 -m pip install --no-binary lxml html5-parser
 
-      - name: Checkout the gh-pages branch
+      - name: Checkout the gh-pages branch on Linux
         if: matrix.os == 'ubuntu-20.04'
         uses: actions/checkout@v3
         with:
@@ -126,14 +122,22 @@ jobs:
           rm -f /tmp/guide/*.html /tmp/guide/validated.xml
           cp guide/index.html /tmp
 
-      - name: Checkout the main branch
+      - name: Checkout the main branch on Linux
         if: matrix.os == 'ubuntu-20.04'
         uses: actions/checkout@v3
+
+      - name: Setup SaxonEE on Linux
+        if: ${{ matrix.os == 'ubuntu-20.04' && env.HAVE_SAXON_EE == 'true' }}
+        run: gpg --batch --yes --passphrase ${{ secrets.SAXON_PASSPHRASE }} -d tools/saxon.enc | tar zxf -
 
       - name: Build
         if: matrix.os == 'ubuntu-20.04'
         run: |
           ./gradlew -PrequireCompileSuccess=true dist
+
+      - name: Cleanup SaxonEE
+        if: ${{ matrix.os == 'ubuntu-20.04' && env.HAVE_SAXON_EE == 'true' }}
+        run: rm -rf lib
 
       - name: Restore EPUB and PDFs
         if: matrix.os == 'ubuntu-20.04'
@@ -220,8 +224,3 @@ jobs:
           repository-name: ${{ github.repository_owner}}/cdn
           branch: master
           target-folder: /
-
-      - name: Cleanup SaxonEE
-        if: ${{ env.HAVE_SAXON_EE == 'true' }}
-        run: rm -rf lib
-
