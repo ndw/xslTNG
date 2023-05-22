@@ -2,7 +2,7 @@
 <report xmlns="http://www.jenitennison.com/xslt/xspec"
          xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/formal-objects-inherit-from-component-section.xspec"
          stylesheet="file:/home/runner/work/xslTNG/xslTNG/build/env/formal-objects-inherit-from-component-section.xsl"
-         date="2023-05-21T10:51:57.856309Z">
+         date="2023-05-22T09:32:25.500038Z">
    <scenario id="scenario1"
               xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/formal-objects-inherit-from-component-section.xspec">
       <label>When transforming figures-inherit-from-component-section</label>

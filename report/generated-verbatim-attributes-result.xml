@@ -2,7 +2,7 @@
 <report xmlns="http://www.jenitennison.com/xslt/xspec"
          xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/generated-verbatim-attributes.xspec"
          stylesheet="file:/home/runner/work/xslTNG/xslTNG/build/xspec-xslt/xspec-driver.xsl"
-         date="2023-05-21T10:55:31.567635Z">
+         date="2023-05-22T09:35:59.103037Z">
    <scenario id="scenario1"
               xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/generated-verbatim-attributes.xspec">
       <label>When converting an address in the raw style</label>
