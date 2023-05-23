@@ -2,7 +2,7 @@
 <report xmlns="http://www.jenitennison.com/xslt/xspec"
          xspec="file:/home/runner/work/xslTNG/xslTNG/src/test/xspec/dates.xspec"
          stylesheet="file:/home/runner/work/xslTNG/xslTNG/build/xspec-xslt/xspec-driver.xsl"
-         date="2023-05-22T09:28:53.300281Z">
+         date="2023-05-23T07:37:28.38615Z">
    <scenario id="scenario1"
               xspec="file:/home/runner/work/xslTNG/xslTNG/src/test/xspec/dates.xspec">
       <label>When transforming a french date with a custom format</label>
