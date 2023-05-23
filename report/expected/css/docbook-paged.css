@@ -419,6 +419,11 @@ h6 {
   margin-bottom: 0.5em;
 }
 
+cite.title {
+  font-weight: inherit;
+  font-family: inherit;
+}
+
 .book > .list-of-titles > .lot > .title,
 .part > .list-of-titles > .lot > .title {
   font-weight: 400;
@@ -2362,6 +2367,20 @@ html.article-style .list-of-titles div .title {
 .section > header > h2,
 .section > header > h3 {
   string-set: SectionTitle content();
+}
+
+h1 {
+  bookmark-level: 1;
+  bookmark-state: closed;
+}
+
+h2 {
+  bookmark-level: 2;
+  bookmark-state: closed;
+}
+
+.article > header > h2 {
+  bookmark-level: none;
 }
 
 header {
