@@ -2,7 +2,7 @@
 <report xmlns="http://www.jenitennison.com/xslt/xspec"
          xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/fit.xspec"
          stylesheet="file:/home/runner/work/xslTNG/xslTNG/build/env/fit.xsl"
-         date="2023-05-23T07:40:21.259891Z">
+         date="2023-05-23T10:05:04.293944Z">
    <scenario id="scenario1"
               xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/fit.xspec">
       <label>When transforming fit.001</label>

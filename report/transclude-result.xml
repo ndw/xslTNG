@@ -2,7 +2,7 @@
 <report xmlns="http://www.jenitennison.com/xslt/xspec"
          xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/transclude.xspec"
          stylesheet="file:/home/runner/work/xslTNG/xslTNG/build/env/transclude.xsl"
-         date="2023-05-23T07:47:34.386221Z">
+         date="2023-05-23T10:13:31.974515Z">
    <scenario id="scenario1"
               xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/transclude.xspec">
       <label>When transforming transclusion.001</label>

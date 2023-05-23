@@ -2,7 +2,7 @@
 <report xmlns="http://www.jenitennison.com/xslt/xspec"
          xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/sections-inherit-from-book-division-component-section.xspec"
          stylesheet="file:/home/runner/work/xslTNG/xslTNG/build/env/sections-inherit-from-book-division-component-section.xsl"
-         date="2023-05-23T07:45:32.384916Z">
+         date="2023-05-23T10:11:07.66991Z">
    <scenario id="scenario1"
               xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/sections-inherit-from-book-division-component-section.xspec">
       <label>When transforming sections-inherit-from-book-division-component-section</label>
