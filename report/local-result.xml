@@ -2,7 +2,7 @@
 <report xmlns="http://www.jenitennison.com/xslt/xspec"
          xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/local.xspec"
          stylesheet="file:/home/runner/work/xslTNG/xslTNG/build/env/local.xsl"
-         date="2023-05-23T16:54:24.75838Z">
+         date="2023-05-23T17:51:48.59362Z">
    <scenario id="scenario1"
               xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/local.xspec">
       <label>When transforming local.001</label>
