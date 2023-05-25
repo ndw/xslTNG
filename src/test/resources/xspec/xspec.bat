@@ -70,6 +70,8 @@ rem ##
     goto :EOF
 
 :xslt
+    echo "CLASSPATH:"
+    echo %CP%
     java ^
         -Dfile.encoding=UTF-8 ^
         -Dxspec.coverage.ignore="%TEST_DIR%" ^
