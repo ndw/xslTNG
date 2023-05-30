@@ -178,18 +178,19 @@
 </xsl:variable>
 
 <!-- I tinkered a bit to find images that would display across
-     a variety of devices. YMMV. -->
+     a variety of devices. YMMV. N.B. Pygmentize on Windows
+     fails if these are the literal characters :-( -->
 <xsl:variable name="v:admonition-icons">
-  <db:tip>☞</db:tip>
-  <db:note>ⓘ</db:note>
-  <db:important>☝</db:important>
-  <db:caution>⚠</db:caution>
-  <db:warning>🛑</db:warning>
-  <db:danger>⚡</db:danger>
+  <db:tip>&#x261e;</db:tip>
+  <db:note>&#x24d8;</db:note>
+  <db:important>&#x261d;</db:important>
+  <db:caution>&#x26a0;</db:caution>
+  <db:warning>&#x1f6d1;</db:warning>
+  <db:danger>&#x26a1;</db:danger>
 </xsl:variable>
 
 <xsl:variable name="v:annotation-close" as="element()">
-  <span>╳</span>
+  <span>&#x2573;</span>
 </xsl:variable>
 
 <xsl:variable name="v:nominal-page-width"
