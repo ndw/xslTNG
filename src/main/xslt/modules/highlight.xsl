@@ -86,6 +86,8 @@
   <xsl:variable name="string"
                 select="ext:pygmentize($source, $options, $pyoptions)"/>
   <xsl:variable name="html">
+    <xsl:message select="'parse-xml:', $string"/>
+    <xsl:message select="unparsed-text($string)"/>
     <xsl:apply-templates select="parse-xml($string)/node()" mode="mp:fix-html"/>
   </xsl:variable>
 
