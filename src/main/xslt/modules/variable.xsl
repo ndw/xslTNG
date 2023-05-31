@@ -88,7 +88,7 @@
 <xsl:variable name="v:verbatim-syntax-highlight-options"
            select="map { }"/>
 <xsl:variable name="v:verbatim-syntax-highlight-pygments-options"
-           select="map { }"/>
+           select="map {'encoding': 'utf-8'}"/>
 
 <xsl:variable name="v:mediaobject-output-base-uri" as="xs:string?">
   <xsl:message use-when="'mediaobject-uris' = $v:debug"
