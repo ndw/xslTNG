@@ -88,7 +88,7 @@
 <xsl:variable name="v:verbatim-syntax-highlight-options"
            select="map { }"/>
 <xsl:variable name="v:verbatim-syntax-highlight-pygments-options"
-           select="map {'encoding': 'utf-8'}"/>
+           select="map { }"/>
 
 <xsl:variable name="v:mediaobject-output-base-uri" as="xs:string?">
   <xsl:message use-when="'mediaobject-uris' = $v:debug"
@@ -178,19 +178,19 @@
 </xsl:variable>
 
 <!-- I tinkered a bit to find images that would display across
-     a variety of devices. YMMV. N.B. Pygmentize on Windows
-     fails if these are the literal characters :-( -->
+     a variety of devices. YMMV. Beware: Pygmentize on Windows
+     doesn't use UTF-8 by default, so bad can happen. -->
 <xsl:variable name="v:admonition-icons">
-  <db:tip>&#x261e;</db:tip>
-  <db:note>&#x24d8;</db:note>
-  <db:important>&#x261d;</db:important>
-  <db:caution>&#x26a0;</db:caution>
-  <db:warning>&#x1f6d1;</db:warning>
-  <db:danger>&#x26a1;</db:danger>
+  <db:tip>☞</db:tip>
+  <db:note>ⓘ</db:note>
+  <db:important>☝</db:important>
+  <db:caution>⚠</db:caution>
+  <db:warning>🛑</db:warning>
+  <db:danger>⚡</db:danger>
 </xsl:variable>
 
 <xsl:variable name="v:annotation-close" as="element()">
-  <span>&#x2573;</span>
+  <span>╳</span>
 </xsl:variable>
 
 <xsl:variable name="v:nominal-page-width"
