@@ -2,7 +2,7 @@
 <report xmlns="http://www.jenitennison.com/xslt/xspec"
          xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/ptoc.xspec"
          stylesheet="file:/home/runner/work/xslTNG/xslTNG/build/env/ptoc.xsl"
-         date="2023-05-31T14:06:17.213711Z">
+         date="2023-06-02T12:30:39.094958Z">
    <scenario id="scenario1"
               xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/ptoc.xspec">
       <label>When transforming ptoc.001</label>
