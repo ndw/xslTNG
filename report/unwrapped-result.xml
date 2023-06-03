@@ -2,7 +2,7 @@
 <report xmlns="http://www.jenitennison.com/xslt/xspec"
          xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/unwrapped.xspec"
          stylesheet="file:/home/runner/work/xslTNG/xslTNG/build/env/unwrapped.xsl"
-         date="2023-06-02T15:16:07.871966Z">
+         date="2023-06-03T09:15:15.742708Z">
    <scenario id="scenario1"
               xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/unwrapped.xspec">
       <label>When transforming unwrapped-footnote.005</label>
