@@ -2,7 +2,7 @@
 <report xmlns="http://www.jenitennison.com/xslt/xspec"
          xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/formal-objects-inherit-from-set-book-division-component.xspec"
          stylesheet="file:/home/runner/work/xslTNG/xslTNG/build/env/formal-objects-inherit-from-set-book-division-component.xsl"
-         date="2023-06-03T14:13:06.641359Z">
+         date="2023-06-07T09:03:20.406481Z">
    <scenario id="scenario1"
               xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/formal-objects-inherit-from-set-book-division-component.xspec">
       <label>When transforming figures-inherit-from-set-book-division-component</label>
