@@ -2,7 +2,7 @@
 <report xmlns="http://www.jenitennison.com/xslt/xspec"
          xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/sections-numbered-from-division.xspec"
          stylesheet="file:/home/runner/work/xslTNG/xslTNG/build/env/sections-numbered-from-division.xsl"
-         date="2023-06-08T16:40:31.89689Z">
+         date="2023-07-29T13:37:33.939687Z">
    <scenario id="scenario1"
               xspec="file:/home/runner/work/xslTNG/xslTNG/build/xspec/sections-numbered-from-division.xspec">
       <label>When transforming sections-numbered-from-division</label>
